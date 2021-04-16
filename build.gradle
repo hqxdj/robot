@@ -21,6 +21,16 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+
+    // mybatis-plus package
+    implementation group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.4.1'
+    implementation group: 'com.baomidou', name: 'mybatis-plus-generator', version: '3.4.1'
+    implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.30'
+
+
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor 'org.projectlombok:lombok'
