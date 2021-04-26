@@ -11,7 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class RobotApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(RobotApplication.class, args);
+        SpringApplication.run(RobotApplication.class, args);
     }
 
 }

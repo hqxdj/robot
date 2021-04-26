@@ -1,4 +1,4 @@
-package com.xdj.robot.handle;
+package com.xdj.robot.handler;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
