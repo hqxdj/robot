@@ -1,4 +1,4 @@
-package com.xdj.robot.codegenerator;
+package codegenerator;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -37,7 +37,7 @@ public class CodeGenerator {
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("xdj");
         gc.setOpen(false);
-        gc.setFileOverride(true);
+        gc.setFileOverride(false);
         //实体属性 Swagger2 注解
         gc.setSwagger2(false);
         mpg.setGlobalConfig(gc);

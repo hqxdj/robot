@@ -9,10 +9,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author xdj
- * @since 2021-04-16
+ * @since 2021-04-27
  */
 public interface IUsersService extends IService<Users> {
 
     Users getUsers();
 
+    void testExecutor();
 }
