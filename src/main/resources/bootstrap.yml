@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: xdjrobot
+  # NACOS 配置中心地址-腾讯
+  cloud:
+    nacos:
+      config:
+        file-extension: YAML
+        server-addr: 42.192.207.31:8848
+      server-addr: 42.192.207.31:8848
+#        server-addr: localhost:8848
+#      server-addr: localhost:8848

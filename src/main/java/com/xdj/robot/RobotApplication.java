@@ -1,11 +1,13 @@
 package com.xdj.robot;
 
+import com.alibaba.nacos.api.config.annotation.NacosConfigurationProperties;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan(basePackages = "com.xdj.robot.mapper.auto")
 @SpringBootApplication
+@MapperScan(basePackages = "com.xdj.robot.mapper.auto")
+@NacosConfigurationProperties(dataId = "xdjrobot", autoRefreshed = true)
 public class RobotApplication {
 
     public static void main(String[] args) {

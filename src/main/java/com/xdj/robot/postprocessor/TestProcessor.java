@@ -12,6 +12,10 @@ public class TestProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        if (beanName.equals("threadPoolTaskExecutor")) {
+            ThreadPoolTaskExecutor threadPoolTaskExecutor = (ThreadPoolTaskExecutor) bean;
+        }
+
         return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
     }
 }
