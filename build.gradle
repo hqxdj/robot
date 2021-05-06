@@ -15,16 +15,20 @@ configurations {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation group: 'com.alibaba.cloud', name: 'spring-cloud-starter-alibaba-nacos-discovery', version: '2021.1'
-    implementation group: 'com.alibaba.cloud', name: 'spring-cloud-starter-alibaba-nacos-config', version: '2021.1'
+    implementation group: 'com.alibaba.cloud', name: 'spring-cloud-starter-alibaba-nacos-discovery', version: '2.2.5.RELEASE'
+    implementation group: 'com.alibaba.cloud', name: 'spring-cloud-starter-alibaba-nacos-config', version: '2.2.5.RELEASE'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-bootstrap', version: '3.0.2'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '3.0.2'
 
+//    local project ref
+//    implementation group: 'com.cloud', name: 'cloud-common', version: '1.0.0'
 
 
     // aop relation
@@ -37,7 +41,6 @@ dependencies {
     implementation group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.4.1'
     implementation group: 'com.baomidou', name: 'mybatis-plus-generator', version: '3.4.1'
     implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.30'
-
 
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'mysql:mysql-connector-java'
