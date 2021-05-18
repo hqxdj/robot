@@ -6,7 +6,7 @@ spring:
     nacos:
       config:
         file-extension: YAML
+#        server-addr: 8.131.86.82:80/nacos
+#      server-addr: 8.131.86.82:80/nacos
         server-addr: 42.192.207.31:8848
       server-addr: 42.192.207.31:8848
-#        server-addr: localhost:8848
-#      server-addr: localhost:8848

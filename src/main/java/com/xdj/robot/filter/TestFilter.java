@@ -1,13 +1,10 @@
 package com.xdj.robot.filter;
 
-import org.springframework.stereotype.Component;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter
-@Component
+@WebFilter(value = "/users/user",filterName = "testFilter")
 public class TestFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
