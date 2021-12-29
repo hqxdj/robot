@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
 @ServletComponentScan
-@MapperScan(basePackages = "com.xdj.robot.mapper.auto")
+@MapperScan(basePackages = "com.xdj.robot.mapper")
 @NacosConfigurationProperties(dataId = "xdjrobot", autoRefreshed = true)
 public class RobotApplication {
 

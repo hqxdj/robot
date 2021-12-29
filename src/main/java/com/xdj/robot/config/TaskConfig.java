@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "spring.task.execution.pool")
+//@ConfigurationProperties(prefix = "spring.task.execution.pool")
 public class TaskConfig {
 
     private int coreSize;

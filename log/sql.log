@@ -1,0 +1,18 @@
+2021-12-29 11:20:20.611 DEBUG --- [http-nio-8888-exec-1] com.xdj.robot.mapper.UserMapper.selectByParams - ==>  Preparing: select * from user where iduser = 1
+2021-12-29 11:20:20.645 DEBUG --- [http-nio-8888-exec-1] com.xdj.robot.mapper.UserMapper.selectByParams - ==> Parameters: 
+2021-12-29 11:20:25.978 DEBUG --- [http-nio-8888-exec-4] com.xdj.robot.mapper.UserMapper.selectByParams - ==>  Preparing: select * from user where iduser = 1
+2021-12-29 11:20:25.979 DEBUG --- [http-nio-8888-exec-4] com.xdj.robot.mapper.UserMapper.selectByParams - ==> Parameters: 
+2021-12-29 11:20:35.782 DEBUG --- [http-nio-8888-exec-6] com.xdj.robot.mapper.UserMapper.selectByParams - ==>  Preparing: select * from user where iduser = 1
+2021-12-29 11:20:35.782 DEBUG --- [http-nio-8888-exec-6] com.xdj.robot.mapper.UserMapper.selectByParams - ==> Parameters: 
+2021-12-29 11:20:53.826 DEBUG --- [http-nio-8888-exec-2] com.xdj.robot.mapper.UserMapper.selectByParams - ==>  Preparing: select * from user where iduser = 1
+2021-12-29 11:20:53.827 DEBUG --- [http-nio-8888-exec-2] com.xdj.robot.mapper.UserMapper.selectByParams - ==> Parameters: 
+2021-12-29 11:20:55.365 DEBUG --- [http-nio-8888-exec-2] com.xdj.robot.mapper.UserMapper.selectByParams - ==>  Preparing: select * from user where iduser = 1
+2021-12-29 11:20:55.366 DEBUG --- [http-nio-8888-exec-2] com.xdj.robot.mapper.UserMapper.selectByParams - ==> Parameters: 
+2021-12-29 11:21:06.799 DEBUG --- [http-nio-8888-exec-2] com.xdj.robot.mapper.UserMapper.selectByParams - ==>  Preparing: select * from user where iduser = 1
+2021-12-29 11:21:06.799 DEBUG --- [http-nio-8888-exec-2] com.xdj.robot.mapper.UserMapper.selectByParams - ==> Parameters: 
+2021-12-29 11:25:57.690 DEBUG --- [http-nio-8888-exec-3] com.xdj.robot.mapper.UserMapper.insert - ==>  Preparing: INSERT INTO user ( iduser, user_name, sex, phone ) VALUES ( ?, ?, ?, ? )
+2021-12-29 11:25:57.694 DEBUG --- [http-nio-8888-exec-3] com.xdj.robot.mapper.UserMapper.insert - ==> Parameters: 2(Integer), 1(String), 1(String), 1(String)
+2021-12-29 11:27:05.982 DEBUG --- [http-nio-8888-exec-5] com.xdj.robot.mapper.UserMapper.insert - ==>  Preparing: INSERT INTO user ( iduser, user_name, sex, phone ) VALUES ( ?, ?, ?, ? )
+2021-12-29 11:27:05.983 DEBUG --- [http-nio-8888-exec-5] com.xdj.robot.mapper.UserMapper.insert - ==> Parameters: 2(Integer), 1(String), 1(String), 1(String)
+2021-12-29 11:27:17.865 DEBUG --- [http-nio-8888-exec-5] com.xdj.robot.mapper.UserMapper.insert - ==>  Preparing: INSERT INTO user ( iduser, user_name, sex, phone ) VALUES ( ?, ?, ?, ? )
+2021-12-29 11:27:17.866 DEBUG --- [http-nio-8888-exec-5] com.xdj.robot.mapper.UserMapper.insert - ==> Parameters: 2(Integer), 1(String), 1(String), 1(String)

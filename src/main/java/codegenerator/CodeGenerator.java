@@ -44,10 +44,10 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://8.131.86.82:3306/xdj_robot?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
+        dsc.setUrl("jdbc:mysql://1.15.242.161:3306/work_record?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 包配置
@@ -57,8 +57,8 @@ public class CodeGenerator {
 
 //        pc.setModuleName(scanner("模块名"));
         pc.setParent("com.xdj.robot");
-        pc.setEntity("model.auto");
-        pc.setMapper("mapper.auto");
+        pc.setEntity("model");
+        pc.setMapper("mapper");
         pc.setService("service");
         pc.setServiceImpl("service.impl");
         pc.setXml("mapper");

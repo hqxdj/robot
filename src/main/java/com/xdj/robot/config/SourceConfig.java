@@ -14,7 +14,7 @@ public class SourceConfig {
     @Resource
     private TaskConfig taskConfig;
 
-    @Bean
+//    @Bean
     public ThreadPoolTaskExecutor threadPoolTaskExecutor() {
         ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
         threadPoolTaskExecutor.setCorePoolSize(taskConfig.getCoreSize());
