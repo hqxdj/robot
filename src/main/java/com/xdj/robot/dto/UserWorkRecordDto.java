@@ -1,7 +1,8 @@
 package com.xdj.robot.dto;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.xdj.robot.model.UserWorkRecord;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -12,7 +13,7 @@ import java.util.Date;
  **/
 
 @Data
-public class UserWorkRecordDto {
+public class UserWorkRecordDto extends Page<UserWorkRecord> {
 
     private Integer id;
 

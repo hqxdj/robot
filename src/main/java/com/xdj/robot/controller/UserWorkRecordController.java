@@ -1,6 +1,7 @@
 package com.xdj.robot.controller;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xdj.robot.dto.UserWorkRecordDto;
 import com.xdj.robot.model.UserWorkRecord;
 import com.xdj.robot.service.IUserWorkRecordService;
@@ -27,6 +28,7 @@ public class UserWorkRecordController {
 
     /**
      * 新增工时记录
+     *
      * @param dto
      * @return
      */
@@ -37,6 +39,7 @@ public class UserWorkRecordController {
 
     /**
      * 查询工时记录
+     *
      * @param dto
      * @return
      */
@@ -47,6 +50,7 @@ public class UserWorkRecordController {
 
     /**
      * 更新工时记录
+     *
      * @param dto
      * @return
      */
@@ -57,6 +61,7 @@ public class UserWorkRecordController {
 
     /**
      * 删除工时记录
+     *
      * @param dto
      * @return
      */
@@ -65,4 +70,14 @@ public class UserWorkRecordController {
         iUserWorkRecordService.deleteUserWorkRecord(dto);
     }
 
+    /**
+     * 分页查询工时记录
+     *
+     * @param dto
+     * @return
+     */
+    @PostMapping("/page-user-work-record")
+    public Page<UserWorkRecord> pageUserWorkRecord(@RequestBody UserWorkRecordDto dto) {
+        return iUserWorkRecordService.pageUserWorkRecord(dto);
+    }
 }

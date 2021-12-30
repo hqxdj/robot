@@ -1,19 +1,20 @@
-####mybatis-plus 设置自增id
+package com.xdj.robot.config;
 
-```java
-  // 实体类上加上该注解
-  @TableId(type = IdType.AUTO)
-  private Integer id;
-```
-***
-####mybatis-plus 分页查询
-```java
+import com.baomidou.mybatisplus.annotation.DbType;
+import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @author 谢道吉
+ * @date 2021/12/30 14:10
+ * @Description
+ **/
+
 @Configuration
 public class MybatisPlusPageConfig {
-    /**
-     * 添加拦截器实现分页
-     * @return
-     */
+
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
@@ -24,5 +25,5 @@ public class MybatisPlusPageConfig {
         interceptor.addInnerInterceptor(paginationInnerInterceptor);
         return interceptor;
     }
+
 }
-```

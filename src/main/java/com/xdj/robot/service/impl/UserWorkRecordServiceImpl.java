@@ -1,6 +1,7 @@
 package com.xdj.robot.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xdj.robot.dto.UserWorkRecordDto;
 import com.xdj.robot.model.UserWorkRecord;
 import com.xdj.robot.mapper.UserWorkRecordMapper;
@@ -37,7 +38,7 @@ public class UserWorkRecordServiceImpl extends ServiceImpl<UserWorkRecordMapper,
     @Override
     public UserWorkRecord findUserWorkRecord(UserWorkRecordDto dto) {
         UserWorkRecord userWorkRecord = new UserWorkRecord();
-        BeanUtils.copyProperties(dto,userWorkRecord);
+        BeanUtils.copyProperties(dto, userWorkRecord);
         QueryWrapper<UserWorkRecord> wrapper = new QueryWrapper<>(userWorkRecord);
         return baseMapper.selectOne(wrapper);
     }
@@ -49,7 +50,7 @@ public class UserWorkRecordServiceImpl extends ServiceImpl<UserWorkRecordMapper,
         if (ObjectUtils.isEmpty(userWorkRecord)) {
             return new UserWorkRecord();
         }
-        BeanUtils.copyProperties(dto,userWorkRecord);
+        BeanUtils.copyProperties(dto, userWorkRecord);
         baseMapper.updateById(userWorkRecord);
         return baseMapper.selectById(id);
     }
@@ -57,5 +58,13 @@ public class UserWorkRecordServiceImpl extends ServiceImpl<UserWorkRecordMapper,
     @Override
     public void deleteUserWorkRecord(UserWorkRecordDto dto) {
         baseMapper.deleteById(dto.getId());
+    }
+
+    @Override
+    public Page<UserWorkRecord> pageUserWorkRecord(UserWorkRecordDto dto) {
+        UserWorkRecord userWorkRecord = new UserWorkRecord();
+        BeanUtils.copyProperties(dto, userWorkRecord);
+        QueryWrapper<UserWorkRecord> wrapper = new QueryWrapper<>(userWorkRecord);
+        return baseMapper.selectPage(dto, wrapper);
     }
 }

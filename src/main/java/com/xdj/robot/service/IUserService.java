@@ -1,5 +1,6 @@
 package com.xdj.robot.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xdj.robot.dto.UserDto;
 import com.xdj.robot.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -40,4 +41,12 @@ public interface IUserService extends IService<User> {
      * @param userDto
      */
     void deleteUser(UserDto userDto);
+
+    /**
+     * 分页查询
+     * @param dto
+     * @return
+     */
+    Page<User> pageUser(UserDto dto);
+
 }

@@ -2,6 +2,7 @@ package com.xdj.robot.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xdj.robot.dto.UserDto;
 import com.xdj.robot.mapper.UserMapper;
@@ -53,7 +54,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     public User updateUser(UserDto dto) {
         Integer id = dto.getId();
         User user = baseMapper.selectById(id);
-        BeanUtils.copyProperties(dto,user);
+        BeanUtils.copyProperties(dto, user);
         baseMapper.updateById(user);
         return baseMapper.selectById(id);
     }
@@ -62,5 +63,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Transactional(rollbackFor = Exception.class)
     public void deleteUser(UserDto userDto) {
         baseMapper.deleteById(userDto.getId());
+    }
+
+
+    @Override
+    public Page<User> pageUser(UserDto dto) {
+        User user = new User();
+        BeanUtils.copyProperties(dto, user);
+        QueryWrapper<User> wrapper = new QueryWrapper<>(user);
+        return baseMapper.selectPage(dto, wrapper);
     }
 }

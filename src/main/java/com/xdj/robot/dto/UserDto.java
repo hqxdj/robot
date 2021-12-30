@@ -1,6 +1,9 @@
 package com.xdj.robot.dto;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.xdj.robot.model.User;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author 谢道吉
@@ -8,8 +11,9 @@ import lombok.Data;
  * @Description
  **/
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class UserDto {
+public class UserDto extends Page<User> {
 
     private Integer id;
 

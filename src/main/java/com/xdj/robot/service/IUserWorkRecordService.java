@@ -1,5 +1,6 @@
 package com.xdj.robot.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xdj.robot.dto.UserWorkRecordDto;
 import com.xdj.robot.model.UserWorkRecord;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -42,4 +43,10 @@ public interface IUserWorkRecordService extends IService<UserWorkRecord> {
      */
     void deleteUserWorkRecord(UserWorkRecordDto dto);
 
+    /**
+     * 分页查询
+     * @param dto
+     * @return
+     */
+    Page<UserWorkRecord> pageUserWorkRecord(UserWorkRecordDto dto);
 }
